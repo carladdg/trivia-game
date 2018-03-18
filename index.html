@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harry Potter Trivia</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Harry Potter Trivia</h1>
+    <section>
+        <button id="start-button">Start</button>
+        <div class="game-display">
+            <div>
+                <p id="timer"></p>
+                <p id="question"></p>
+                <div id="answer-options"></div>
+            </div>
+            <div id="results">
+                <h2 id="guess-evaluation"></h2>
+                <p id="correct-answer"></p>
+                <img src="#" alt="" id="question-gif">
+            </div>
+            <div id="game-stats">
+                <h2>All done! Here's how you did.</h2>
+                <p>Correct Answers: <span id="number-correct"></span></p>
+                <p>Incorrect Answers: <span id="number-incorrect"></span></p>
+                <p>Unanswered Questions: <span id="number-unanswered"></span></p>
+                <button id="restart-button">Play Again?</button>
+            </div>
+        </div>
+    </section>  
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

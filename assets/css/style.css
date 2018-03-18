@@ -1,0 +1,7 @@
+#question-gif img[src="#"] {
+    display: none;
+}
+
+#game-stats {
+    display: none;
+}
