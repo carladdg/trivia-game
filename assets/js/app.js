@@ -18,11 +18,98 @@ class TriviaQuestion {
 
 var triviaGame = {
     
-    generateQuestions: function() {
-        questionOne = new TriviaQuestion("q1", "1", "2", "3", "4", "./assets/img/test.gif"),
-        questionTwo = new TriviaQuestion("q2", "1", "2", "3", "4", "./assets/img/test.gif"),
-        questionThree = new TriviaQuestion("q3", "1", "2", "3", "4", "./assets/img/test.gif")
-        this.questionBank.push(questionOne, questionTwo, questionThree);
+    generateQuestions: function() {   
+        this.questionBank.push(
+            new TriviaQuestion(
+                "What is the name of Ginny Weasley's pet Pygmy Puff?", 
+                "Arnold", 
+                "Snuffles", 
+                "Steven", 
+                "Bobtail", 
+                "./assets/img/pygmy-puff.gif"
+            ),
+
+            new TriviaQuestion(
+                "Which wizarding school does Viktor Krum attend?", 
+                "Durmstrang", 
+                "Hogwarts", 
+                "Beauxbatons", 
+                "Ilvermorny", 
+                "./assets/img/viktor-krum.gif"
+            ),
+    
+            new TriviaQuestion(
+                "Which Hogwarts house did Moaning Myrtle belong to?", 
+                "Ravenclaw", 
+                "Gryffindor", 
+                "Hufflepuff", 
+                "Slytherin", 
+                "./assets/img/moaning-myrtle.gif"
+            ),
+
+            new TriviaQuestion(
+                "Hermione's cat, Crookshanks, is half what magical creature?", 
+                "Kneazle", 
+                "Niffler", 
+                "Hippogriff", 
+                "Hinkypunk", 
+                "./assets/img/crookshanks.gif"
+            ),
+
+            new TriviaQuestion(
+                "What violent spell does Harry learn from the Half-Blood Prince's textbook?", 
+                "Sectumsempra", 
+                "Levicorpus", 
+                "Scourgify", 
+                "Densaugeo", 
+                "./assets/img/sectumsempra.gif"
+            ),
+
+            new TriviaQuestion(
+                "Which of these dragon breeds was NOT an opponent in the Triwizard Tournament?", 
+                "Norwegian Ridgeback", 
+                "Hungarian Horntail", 
+                "Chinese Fireball", 
+                "Swedish Short-Snout", 
+                "./assets/img/norwegian-ridgeback.gif"
+            ),
+
+            new TriviaQuestion(
+                "What type of wood was Harry's wand made of?", 
+                "Holly", 
+                "Yew", 
+                "Hawthorn", 
+                "Elder", 
+                "./assets/img/harry-wand.gif"
+            ),
+
+            new TriviaQuestion(
+                "What does S.P.E.W. stand for?", 
+                "Society for the Promotion of Elfish Welfare", 
+                "Society for the Promotion of Equality for Witches", 
+                "Society for the Partnership of Elves and Wizards", 
+                "Society for the Protection of Every Wizard", 
+                "./assets/img/dobby.gif"
+            ),
+
+            new TriviaQuestion(
+                "Who wrote 'Hogwarts: A History'?", 
+                "Bathilda Bagshot", 
+                "Miranda Goshawk", 
+                "Inigo Imago", 
+                "Cornelius Agrippa", 
+                "./assets/img/hogwarts-a-history.gif"
+            ),
+
+            new TriviaQuestion(
+                "What Patronus form does Luna Lovegood have?", 
+                "Hare", 
+                "Otter", 
+                "Dolphin", 
+                "Hedgehog", 
+                "./assets/img/luna-lovegood.gif"
+            ),
+        );
     },
     
     questionBank: [],
@@ -109,7 +196,7 @@ var triviaGame = {
     resetGame: function() {
         this.timeRemaining = 30;
         $("#guess-evaluation, #correct-answer").empty();
-        $("#question-gif").attr({"src":"", "alt":""})
+        $("#question-gif").attr({"src":"#", "alt":""})
     },
 
     endGame: function() {
