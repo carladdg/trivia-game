@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Harry Potter Trivia</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-    <h1>Harry Potter Trivia</h1>
-    <section>
-        <button id="start-button">Start</button>
+    <section class="game-container">
+        <h1 class="game-title">Harry Potter Trivia</h1>
+        <button class="game-button" id="start-button">Start</button>
         <div class="game-display">
-            <div>
+            <div id="question-info">
                 <p id="timer"></p>
                 <p id="question"></p>
                 <div id="answer-options"></div>
@@ -26,11 +27,11 @@
                 </div>
             </div>
             <div id="game-stats">
-                <h2>All done! Here's how you did.</h2>
+                <h2 class="done-message">All done! Here's how you did.</h2>
                 <p>Correct Answers: <span id="number-correct"></span></p>
                 <p>Incorrect Answers: <span id="number-incorrect"></span></p>
                 <p>Unanswered Questions: <span id="number-unanswered"></span></p>
-                <button id="restart-button">Play Again?</button>
+                <button class="game-button" id="restart-button">Play Again?</button>
             </div>
         </div>
     </section>  

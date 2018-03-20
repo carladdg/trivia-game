@@ -125,11 +125,14 @@ var triviaGame = {
     numberUnanswered: 0,
 
     startGame: function() {
+        $(".game-display").show();
         this.generateQuestions();
         this.selectQuestion();
     },
 
     selectQuestion: function() {
+        $("#question-info").show();
+
         var randomQuestionNumber = Math.floor(Math.random() * this.questionBank.length);
         this.currentQuestion = this.questionBank[randomQuestionNumber];
         
@@ -151,7 +154,7 @@ var triviaGame = {
     },
 
     startTimer: function() {
-        $("#timer").text("Time Remaining: " + this.timeRemaining);
+        $("#timer").html("Time Remaining: <span class='countdown'>" + this.timeRemaining + "</span>");
         
         questionTimer = setInterval(decreaseTimeRemaining, 1000);
     },
@@ -173,6 +176,7 @@ var triviaGame = {
 
     displayResult: function(guessIsCorrect) {
         $("#question, #answer-options, #timer").empty();
+        $("#question-info").hide();
         
         if (guessIsCorrect) {
             $("#guess-evaluation").text("You got it!");
@@ -190,7 +194,7 @@ var triviaGame = {
     },
 
     displayCorrectAnswer: function() {
-        $("#correct-answer").text("The answer was " + this.currentQuestion.correctAnswer + ".");
+        $("#correct-answer").html("The answer was <span class='answer'>" + this.currentQuestion.correctAnswer + "</span>.");
     },
 
     resetGame: function() {
@@ -240,7 +244,7 @@ var questionTimer;
 
 var decreaseTimeRemaining = function() {
     triviaGame.timeRemaining--;
-    $("#timer").text("Time Remaining: " + triviaGame.timeRemaining);
+    $("#timer").html("Time Remaining: <span class='countdown'>" + triviaGame.timeRemaining + "</span>");
 
     if (triviaGame.timeRemaining === 0) {
         triviaGame.numberUnanswered++;
